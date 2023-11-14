@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="globopackDS">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="globopackDS.jar">
+      <element id="module-output" name="Globopack" />
+    </root>
+  </artifact>
+</component>
