@@ -35,9 +35,9 @@ public class acaoGeraLiberacao implements AcaoRotinaJava {
                 DynamicVO parVO = parDAO.findOne("CODPARC = (SELECT CODPARC FROM TGFITC WHERE NUMCOTACAO=? AND CODPROD=? AND MELHOR='S')",numcotacao,linha.getCampo("CODPROD"));
                 if(parVO != null) {
                     codparc = parVO.asBigDecimalOrZero("CODPARC");
-                }else {
+                }/*else {
                     ErroUtils.disparaErro("ESCOLHA QUAL MELHOR PREÇO PRIMEIRO");
-                }
+                }*/
                 DynamicVO itemcot = itcDAO.findOne("NUMCOTACAO=? AND CODPROD=? AND CODPARC=?",numcotacao,linha.getCampo("CODPROD"),codparc);
 
                 BigDecimal codprod = itemcot.asBigDecimalOrZero("CODPROD");
